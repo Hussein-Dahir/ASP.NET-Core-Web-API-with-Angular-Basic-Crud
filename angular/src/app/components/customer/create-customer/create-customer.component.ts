@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from 'src/services/customer.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Customer } from '../../../../models/icustomer';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule, RouterModule, FormsModule],
   selector: 'app-create-customer',
   templateUrl: './create-customer.component.html',
   styleUrls: ['./create-customer.component.css']
