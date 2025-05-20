@@ -7,28 +7,19 @@ import { AppComponent } from './app.component';
 import { CreateCustomerComponent } from './components/customer/create-customer/create-customer.component'
 import { NavbarComponent } from '../app/layout/navbar/navbar.component'
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import { CustomerService } from 'src/services/customer.service';
 import { ListOfCustomerComponent } from './components/customer/list-of-customer/list-of-customer.component';
 import { EditCustomerComponent } from './components/customer/edit-customer/edit-customer.component';
-import { NgHttpLoaderModule } from 'ng-http-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      NavbarComponent,
-      CreateCustomerComponent,
-      EditCustomerComponent,
-      ListOfCustomerComponent
-   ],
+   declarations: [],
    imports: [
       BrowserModule,
       AppRoutingModule,
-      HttpClientModule,
       RouterModule.forRoot(
          [
             { path: '', redirectTo: 'customers', pathMatch: 'full' },
@@ -43,14 +34,19 @@ import { ToastrModule } from 'ngx-toastr';
             }
          ]
       ),
-      NgHttpLoaderModule.forRoot(),
       BrowserAnimationsModule,
       ToastrModule.forRoot({
          timeOut: 3000,
          positionClass: 'toast-top-right',
          preventDuplicates: true,
       }),
-      FormsModule
+      FormsModule,
+      BrowserModule,
+      AppComponent,
+      NavbarComponent,
+      CreateCustomerComponent,
+      EditCustomerComponent,
+      ListOfCustomerComponent
    ],
    providers: [
       CustomerService
