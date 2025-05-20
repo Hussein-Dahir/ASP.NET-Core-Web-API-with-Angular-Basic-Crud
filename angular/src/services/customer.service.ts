@@ -28,7 +28,7 @@ export class CustomerService {
   }
 
   deleteCustomerById(id: number) {
-    return this.http.delete(`${environment.baseUrl}customers/${id}`, { responseType: 'text' });
+    return this.http.delete(`${environment.baseUrl}customers?id=${id}`, { responseType: 'text' });
   }
 }
 
