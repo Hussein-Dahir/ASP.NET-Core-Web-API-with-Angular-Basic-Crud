@@ -64,7 +64,7 @@ namespace webapi.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> DeleteById(int id)
         {
             try
