@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CustomerService } from 'src/services/customer.service';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Customer } from '../../../../models/icustomer';
+import { Customer } from 'src/models/icustomer';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
